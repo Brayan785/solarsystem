@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TAMAÑO DE LOS PLANETAS</title>
+<script
+defer
+src="https://app.embed.im/snow.js">
+</script>
+</head>
+ <body bgcolor="#F6CEF5">
+
+	<di><marquee direction="up"><h1><em><center>TAMAÑO DE LOS PLANETAS</center></em><h1></marquee></div>
+<div>
+<script>
+	function sub3(){
+		var correctas=0;
+		var incorrectas=0;
+		if(document.getElementById('radio1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('radio2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('radio3').checked){
+		correctas=correctas+1;
+		}
+		if(document.getElementById('resp1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('resp2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('resp3').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('rad2').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad3').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu1').checked){
+			correctas=correctas+1;
+		}
+			if(document.getElementById('respu2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu3').checked){
+			incorrectas=incorrectas+1;
+		}
+		
+document.write('Respuestas correctas:' +correctas );	
+document.write('Respuestas incorrectas:' +incorrectas);	
+
+		
+	}
+	</script>
+</div>
+<div>
+	<form>
+		1.¿Cuál es el tamaño del planeta MERCURIO?
+		<br>
+		<input type="radio" id="radio1" name="regunt">6,582km
+		<br>
+		<input type="radio" id="radio2" name="regunt">2,109km
+		<br>
+		<input type="radio" id="radio3" name="regunt">2,439.7km
+		<br>
+		
+		2.¿Cuál es el tamaño del planeta TIERRA?
+		<br>
+		<input type="radio" id="resp1" name="regunt1">7,809km
+		<br>
+		<input type="radio" id="resp2" name="regunt1">8,011km
+		<br>
+		<input type="radio" id="resp3" name="regunt1">6,371km
+		<br>
+		
+		3.¿Cuál es el tamaño del planeta VENUS?
+		<br>
+		<input type="radio" id="rad1" name="regunt2">6,371km
+		<br>
+		<input type="radio" id="rad2" name="regunt2">6,051km
+		<br>
+		<input type="radio" id="rad3" name="regunt2">2,439.7km
+		<br>
+		
+		4.¿Cuál es el tamaño del planeta MARTE? 
+		<br>
+		<input type="radio" id="respu1" name="regunt3">3,389km
+		<br>
+
+		<input type="radio" id="respu2" name="regunt3">1,000km
+		<br>
+		<input type="radio" id="respu3" name="regunt3">1,108km
+		<br>
+<input type="button" value="verificar"  onClick="sub3()">
+		<br>
+	
+
+
+</form>
+</div>
+</body>
+</html>

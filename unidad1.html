@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ORDER ON THE PLANETS</title>
+</head>
+<style type="text/css">
+
+body{
+	background-image: url(IMG.JPEG);
+}
+h1{
+	color: #FDFEFE;
+}
+	.content-input{
+	position: relative;
+	margin-bottom: 30px;
+	padding:5px 0 5px 60px;
+	display: block;
+}
+
+.content-input input + i{
+ background: #f0f0f0;
+ border:2px solid rgba(0,0,0,0.2);
+ position: absolute; 
+ left: 0;
+ top: 0;
+}
+
+.content-input input[type=radio] + i{
+ height: 30px;
+ width: 30px;
+ border-radius: 100%;
+ left: 15px;
+}
+.content-input input[type=radio] + i:before{
+	content: '';
+	display: block;
+	height: 18px;
+	width: 18px;
+	background: red;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 4px;
+	left: 4px;
+	background:#2AC176;
+	transition: all 0.25s ease; 
+	transform: scale(0) ;
+	opacity: 0; 
+}
+
+
+.content-input input[type=radio]:checked + i:before{
+	transform: scale(1);
+	opacity: 1;
+}
+
+.content-input:hover input[type=radio]:not(:checked) + i{
+	background: #B1E8CD;
+}	
+*{box-sizing:border-box;}
+
+form{
+	width:800px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+	<CENTER><h1>ORDER ON THE PLANETS</h1></CENTER>
+<form>
+		1.What is the closest planet to the Sun?(¿Cuál es el planeta más cercano al Sol?)
+		<br>
+		<input type="radio" id="radio1" name="regunt">Saturn
+		<br>
+		<input type="radio" id="radio2" name="regunt">Jupiter
+		<br>
+		<input type="radio" id="radio3" name="regunt">Mercury 
+		<br>
+		
+		2.How many planets are in our solar system?(¿Cuántos planetas hay en nuestro sistema solar?)
+		<br>
+		<input type="radio" id="resp1" name="regunt1">nine
+		<br>
+		<input type="radio" id="resp2" name="regunt1">ten
+		<br>
+		<input type="radio" id="resp3" name="regunt1">Eight
+		<br>
+		
+		3.What is the eighth planet in order from the Sun?(Cuál es el octavo planeta en orden desde el Sol?)
+		<br>
+		<input type="radio" id="rad1" name="regunt2">Saturn
+		<br>
+		<input type="radio" id="rad2" name="regunt2">Venus
+		<br>
+		<input type="radio" id="rad3" name="regunt2">Neptune
+		<br>
+		
+		4.What planet is known for its rings?(¿Qué planeta es conocido por sus anillos?) 
+		<br>
+		<input type="radio" id="respu1" name="regunt3">Saturn
+		<br>
+
+		<input type="radio" id="respu2" name="regunt3">Neptune
+		<br>
+		<input type="radio" id="respu3" name="regunt3">Eart
+		<br>
+<input type="button" value="Confirmar"  onClick="sub3()">
+		<br>
+	</form>
+
+	<script>
+	function sub3(){
+		var correctas=0;
+		var incorrectas=0;
+		if(document.getElementById('radio1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('radio2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('radio3').checked){
+		correctas=correctas+1;
+		}
+
+
+
+		if(document.getElementById('resp1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('resp2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('resp3').checked){
+			correctas=correctas+1;
+		}
+
+
+
+
+		if(document.getElementById('rad1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('rad2').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad3').checked){
+			incorrectas=incorrectas+1;
+		}
+
+
+
+		if(document.getElementById('respu1').checked){
+			correctas=correctas+1;
+		}
+			if(document.getElementById('respu2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu3').checked){
+			incorrectas=incorrectas+1;
+		}
+		
+document.write('Respuestas correctas:' +correctas );
+document.write('<br>');	
+document.write('Respuestas incorrectas:' +incorrectas);	
+
+		
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>¿Cuantas Lunas Tiene Cada Planeta?</title>
+<script
+defer
+src="https://app.embed.im/snow.js">
+</script>
+</head>
+ <body bgcolor="#A9F5E1">
+
+	<di><marquee><h1><em><center>¿Cuantas Lunas Tiene Cada Planeta?</center></em><h1></marquee></div>
+<div>
+<script>
+	function sub3(){
+		var correctas=0;
+		var incorrectas=0;
+		if(document.getElementById('radio1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('radio2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('radio3').checked){
+		correctas=correctas+1;
+		}
+		if(document.getElementById('resp1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('resp2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('resp3').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('rad2').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad3').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu1').checked){
+			correctas=correctas+1;
+		}
+			if(document.getElementById('respu2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu3').checked){
+			incorrectas=incorrectas+1;
+		}
+		
+document.write('Respuestas correctas:' +correctas );	
+document.write('Respuestas incorrectas:' +incorrectas);	
+
+		
+	}
+	</script>
+</div>
+<div>
+	<form>
+		1.¿Cuántas Lunas Tiene El Planeta Tierra?
+		<br>
+		<input type="radio" id="radio1" name="regunt">10 Lunas.
+		<br>
+		<input type="radio" id="radio2" name="regunt">15 Lunas.
+		<br>
+		<input type="radio" id="radio3" name="regunt">1 Luna.
+		<br>
+		
+		2.¿Cuántas Lunas Tiene El Planeta Marte?
+		<br>
+		<input type="radio" id="resp1" name="regunt1">3 Lunas.
+		<br>
+		<input type="radio" id="resp2" name="regunt1">10 Lunas.
+		<br>
+		<input type="radio" id="resp3" name="regunt1">2 Lunas.
+		<br>
+		
+		3.¿Cuántas Lunas Tiene El Planeta Jupiter?
+		<br>
+		<input type="radio" id="rad1" name="regunt2">58+ Lunas.
+		<br>
+		<input type="radio" id="rad2" name="regunt2">79 Lunas
+		<br>
+		<input type="radio" id="rad3" name="regunt2">9 Lunas.
+		<br>
+		
+4.¿Cuántas Lunas Tiene El Planeta Saturno? 		<br>
+		<input type="radio" id="respu1" name="regunt3">53 y 29 Por confirmar.
+		<br>
+
+		<input type="radio" id="respu2" name="regunt3">70 Lunas.
+		<br>
+		<input type="radio" id="respu3" name="regunt3">Ninguna Luna.
+		<br>
+<input type="button" value="verificar"  onClick="sub3()">
+		<br>
+	
+
+
+</form>
+</div>
+</body>
+</html>

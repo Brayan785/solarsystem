@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEMPERATURE OF EACH PLANET</title>
+</head>
+<style type="text/css">
+
+body{
+	background-image: url(uno.jpeg);
+}
+h1{
+	color: #FDFEFE;
+}
+	.content-input{
+	position: relative;
+	margin-bottom: 30px;
+	padding:5px 0 5px 60px; 
+	display: block;
+}
+
+.content-input input + i{
+ background: #f0f0f0;
+ border:2px solid rgba(0,0,0,0.2);
+ position: absolute; 
+ left: 0;
+ top: 0;
+}
+
+.content-input input[type=radio] + i{
+ height: 30px;
+ width: 30px;
+ border-radius: 100%;
+ left: 15px;
+}
+.content-input input[type=radio] + i:before{
+	content: '';
+	display: block;
+	height: 18px;
+	width: 18px;
+	background: red;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 4px;
+	left: 4px;
+	background:#2AC176;
+	transition: all 0.25s ease; 
+	transform: scale(0);
+	opacity: 0; 
+}
+
+
+.content-input input[type=radio]:checked + i:before{
+	transform: scale(1);
+	opacity: 1;
+}
+
+.content-input:hover input[type=radio]:not(:checked) + i{
+	background: #B1E8CD;
+}	
+*{box-sizing:border-box;}
+
+form{
+	width:800px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#EAF2F8;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+	<CENTER><h1>TEMPERATURE OF EACH PLANET</h1></CENTER>
+<form>
+		1.What is the average temperature on the surface of Mercury?(¿Cuál es la temperatura media en la superficie de Mercurio?)
+		<br>
+		<input type="radio" id="radio1" name="regunt">de -170 ºC a +330 ºC.
+		<br>
+		<input type="radio" id="radio2" name="regunt">de -160 ºC a +680 ºC.
+		<br>
+		<input type="radio" id="radio3" name="regunt">de –180 ºC a +430 ºC. 
+		<br>
+		
+		2.What planet has the coldest temperature in the solar system?(¿Qué planeta tiene la temperatura más fría en el sistema solar?)
+		<br>
+		<input type="radio" id="resp1" name="regunt1">Venus
+		<br>
+		<input type="radio" id="resp2" name="regunt1">Neptuno
+		<br>
+		<input type="radio" id="resp3" name="regunt1">Uranus
+		<br>
+		
+		3.Why is Venus the hottest planet in the solar system?(¿Por qué Venus es el planeta más caliente del sistema solar?)
+		<br>
+		<input type="radio" id="rad1" name="regunt2">Saturn
+		<br>
+		<input type="radio" id="rad2" name="regunt2">Venus
+		<br>
+		<input type="radio" id="rad3" name="regunt2">Mercury
+		<br>
+		
+		4.What is the temperature on the surface of Mars?(¿Cuál es la temperatura en la superficie de Marte?) 
+		<br>
+		<input type="radio" id="respu1" name="regunt3">(-129℃)
+		<br>
+
+		<input type="radio" id="respu2" name="regunt3">(-160℃)
+		<br>
+		<input type="radio" id="respu3" name="regunt3">(-110℃)
+		<br>
+<input type="button" value="Confirmar"  onClick="sub3()">
+		<br>
+	</form>
+
+	<script>
+	function sub3(){
+		var correctas=0;
+		var incorrectas=0;
+		if(document.getElementById('radio1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('radio2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('radio3').checked){
+		correctas=correctas+1;
+		}
+
+
+
+		if(document.getElementById('resp1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('resp2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('resp3').checked){
+			correctas=correctas+1;
+		}
+
+
+
+
+		if(document.getElementById('rad1').checked){
+			incorrectas=incorrectas+1;
+		}
+			if(document.getElementById('rad2').checked){
+			correctas=correctas+1;
+		}
+		if(document.getElementById('rad3').checked){
+			incorrectas=incorrectas+1;
+		}
+
+
+
+		if(document.getElementById('respu1').checked){
+			correctas=correctas+1;
+		}
+			if(document.getElementById('respu2').checked){
+			incorrectas=incorrectas+1;
+		}
+		if(document.getElementById('respu3').checked){
+			incorrectas=incorrectas+1;
+		}
+		
+document.write('Respuestas correctas:' +correctas );
+document.write('<br>');	
+document.write('Respuestas incorrectas:' +incorrectas);	
+
+		
+	}
+	</script>
+
+</body>
+</html>
